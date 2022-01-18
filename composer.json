@@ -1,0 +1,62 @@
+{
+    "name": "prettifystudio/twitter",
+    "description": "Twitter API for PHP & Laravel",
+    "keywords": ["twitter", "laravel", "laravel5", "laravel6", "laravel7", "laravel8"],
+    "license": "MIT",
+    "type": "library",
+    "authors": [
+        {
+            "name": "prettify",
+            "email": "hey@prettify.studio",
+            "homepage": "https://prettify.studio"
+        }
+    ],
+    "require": {
+        "php": "^8.0",
+        "ext-json": "*",
+        "illuminate/support": "6 - 8",
+        "guzzlehttp/guzzle": "^6.4 || ^7.0",
+        "psr/log": "^1.1 || ^2.0 || ^3.0",
+        "nesbot/carbon": "^1.2 || ^2.26",
+        "guzzlehttp/oauth-subscriber": "^0.6",
+        "php-di/php-di": "^6.2",
+        "kamermans/guzzle-oauth2-subscriber": "^1.0",
+        "phpoption/phpoption": "^1.7",
+        "vlucas/phpdotenv": "*",
+        "react/http": "^1.2",
+        "league/oauth2-client": "^2.6"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^8.3 || ^9.1",
+        "orchestra/testbench": "3.8 - 6",
+        "phpspec/prophecy-phpunit": "^2.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "PrettifyStudio\\Twitter\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "PrettifyStudio\\Twitter\\Tests\\": "tests"
+        },
+        "files": [
+            "vendor/phpunit/phpunit/src/Framework/Assert/Functions.php"
+        ]
+    },
+    "scripts": {
+        "test": "phpunit",
+        "test:ci": "phpunit --verbose --coverage-clover=coverage.xml"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "PrettifyStudio\\Twitter\\ServiceProvider\\LaravelServiceProvider"
+            ],
+            "aliases": {
+                "Twitter": "PrettifyStudio\\Twitter\\Facade\\Twitter"
+            }
+        }
+    },
+    "minimum-stability": "stable"
+}
