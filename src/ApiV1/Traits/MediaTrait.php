@@ -34,6 +34,19 @@ trait MediaTrait
         return $this->post('media/upload', $this->normalizeParameters($parameters), true);
     }
 
+    /**
+     * Get the status of uploaded media
+     *
+     * Parameters :
+     * - command (STATUS)
+     * - media_id
+     */
+    public function uploadStatus($parameters = [])
+    {
+        return $this->get('media/upload', $parameters);
+    }
+
+
     private function normalizeParameters(array $parameters): array
     {
         $normalizedParams = [];

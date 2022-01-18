@@ -11,6 +11,8 @@
 Twitter API for Laravel 6.x, 7.x, 8.x (and new versions as they are released). Also supports other frameworks via
 PHP-DI (or feel free to add support for your framework via PR)
 
+Notice: This is a clone from [atymic\twitter](https://github.com/atymic/twitter). All of this work is his work. 
+
 You need to create an application and create your access token in
 the [Application Management](https://apps.twitter.com/).
 
