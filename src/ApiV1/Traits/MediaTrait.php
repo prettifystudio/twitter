@@ -43,7 +43,7 @@ trait MediaTrait
      */
     public function uploadStatus($parameters = [])
     {
-        return $this->get('media/upload', $parameters);
+        return $this->get('media/upload', $parameters, true);
     }
 
 
