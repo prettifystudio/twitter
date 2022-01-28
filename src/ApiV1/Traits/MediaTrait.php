@@ -43,7 +43,7 @@ trait MediaTrait
      */
     public function uploadStatus($parameters = [])
     {
-        return $this->get('media/upload', $parameters, true);
+        return $this->directQuery('https://upload.twitter.com/1.1/media/upload.json', 'GET', $parameters);
     }
 
 
